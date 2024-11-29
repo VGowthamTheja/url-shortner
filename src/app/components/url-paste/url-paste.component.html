@@ -1,0 +1,13 @@
+<div class="paste-input">
+  <input
+    [(ngModel)]="longUrl"
+    type="text"
+    name="longUrl"
+    placeholder="Paste your link here to trim"
+  />
+  <button (click)="postLinkToApi()">trim</button>
+</div>
+
+@if (tinyUrl()) {
+  <app-url-copy [url]="tinyUrl()" />
+}
